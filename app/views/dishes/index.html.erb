@@ -8,14 +8,13 @@
 </div>
 
 <div class="container">
-    <div class="col-md-4">
-      <% @courses.each do |course| %>
-      <h1><%= course.name %></h1>
-      <%= link_to 'add dish to '+"#{course.name}", new_dish_path(:course_id => course.id) %>
-        <% course.dishes.each do |dish| %>
-        <h4><%= dish.name %></h4>
-        <% end %>
-      <% end %>
-    </div>
-
+  <% @courses.each do |course| %>
+  <div class= "col-md-4">
+    <%= link_to 'add item to '+"#{course.name}", new_dish_path(:course_id => course.id) %>
+    <%= content_tag(:h2, course.name)%>
+    <% course.dishes.each do |dish| %>
+    <%= content_tag(:h4, dish.name) %>
+  </div>
+    <% end %>
+  <% end %>
 </div>
