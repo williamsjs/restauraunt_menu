@@ -9,12 +9,20 @@
 
 <div class="container">
   <% @courses.each do |course| %>
-  <div class= "col-md-4">
-    <%= link_to 'add item to '+"#{course.name}", new_dish_path(:course_id => course.id) %>
-    <%= content_tag(:h2, course.name)%>
-    <% course.dishes.each do |dish| %>
-    <%= content_tag(:h4, dish.name) %>
-  </div>
+    <div class= "col-md-4">
+      <div class="padding">
+      <%= link_to 'add item to '+"#{course.name}", new_dish_path(:course_id => course.id), class: "btn btn-default" %>
+      <%= image_tag asset_url("#{course.name.downcase}.png", class: "img-rounded") %>
+      <%= content_tag(:h2, course.name)%>
+      <% course.dishes.each do |dish| %>
+      <%= content_tag(:h4, dish.name) %>
+      <ul>
+        <p>Price: <%= dish.price %></p>
+        <p>Description: <%= dish.description %></p>
+      </ul>
+      </div>
+    </div>
     <% end %>
   <% end %>
+
 </div>
