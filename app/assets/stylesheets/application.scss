@@ -16,9 +16,6 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
- body {
-   background: lightgreen;
- }
 
  h1, h2, h4 {
    text-align: center;
@@ -36,8 +33,4 @@
 
  .padding h4, img{
    margin: 30px;
- }
-
- .padding {
-   border: 2px solid black;
  }
