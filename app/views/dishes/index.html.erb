@@ -11,8 +11,8 @@
   <% @courses.each do |course| %>
     <div class="col-md-4" id="menu_items">
         <%= link_to 'add item to '+"#{course.name}", new_dish_path(:course_id => course.id), class: "btn btn-default" %>
-        <%= image_tag asset_url("#{course.name.downcase}.png", class: "img-rounded") %>
-        <%= content_tag(:h2, course.name)%>
+        <%= image_tag asset_url("#{course.name.downcase}.png") %>
+        <%= content_tag(:h2, course.name, id: "course_name")%>
         <% course.dishes.each do |dish| %>
         <%= content_tag(:h4, dish.name) %>
         <p><strong>Price:</strong> <%= content_tag(:span, "#{add_dollar_sign(dish.price)}") %>
