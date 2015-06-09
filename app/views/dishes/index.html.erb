@@ -15,7 +15,7 @@
         <%= content_tag(:h2, course.name)%>
         <% course.dishes.each do |dish| %>
         <%= content_tag(:h4, dish.name) %>
-        <p><strong>Price:</strong> <%= content_tag(:span, "#{dish.price}") %>
+        <p><strong>Price:</strong> <%= content_tag(:span, "#{add_dollar_sign(dish.price)}") %>
         <p><strong>Description:</strong> <%= content_tag(:span, "#{dish.description}") %>
       <% end %>
     </div>
