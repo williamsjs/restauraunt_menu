@@ -2,26 +2,24 @@
 <div class="container">
   <div class="col-md-4"></div>
   <div class="col-md-4">
-    <h1>Menu</h1>
+      <h1 id="menu_header">Menu</h1>
   </div>
   <div class="col-md-4"></div>
 </div>
 
 <div class="container">
   <% @courses.each do |course| %>
-    <div class="padding">
-      <div class="col-md-4">
+    <div class="col-md-4" id="menu_items">
         <%= link_to 'add item to '+"#{course.name}", new_dish_path(:course_id => course.id), class: "btn btn-default" %>
         <%= image_tag asset_url("#{course.name.downcase}.png", class: "img-rounded") %>
         <%= content_tag(:h2, course.name)%>
         <% course.dishes.each do |dish| %>
         <%= content_tag(:h4, dish.name) %>
-        <%= content_tag(:p, "Price: #{dish.price}") %>
-        <%= content_tag(:p, "Description: #{dish.description}") %>
-        <% end %>
-      </div>
+        <p><strong>Price:</strong> <%= content_tag(:span, "#{dish.price}") %>
+        <p><strong>Description:</strong> <%= content_tag(:span, "#{dish.description}") %>
       <% end %>
     </div>
+    <% end %>
   </div>
 
 

@@ -11,6 +11,7 @@ Course.create(name: "Soup")
 Course.create(name: "Main")
 Course.create(name: "Dessert")
 Course.create(name: "Drinks")
+Course.create(name: "Salads")
 
 #appetizers
 Dish.create(name: "Duck Fries", course_id: 1, price: 8.87, description: "Our duck fries are made from the finest duck fat, fried up with the best lard")
@@ -36,3 +37,8 @@ Dish.create(name: "Strawberry Shortcake", course_id: 4, price: 7.00, description
 Dish.create(name: "Margarita", course_id: 5, price: 8.87, description: "Made from the finest tequila... 100% agave")
 Dish.create(name: "Irish Car Bomb", course_id: 5, price: 8.87, description: "Fun, but generally inadvasible")
 Dish.create(name: "Butter Beer", course_id: 5, price: 8.87, description: "The finest, drank by Harry Potter, himself")
+
+#salads
+Dish.create(name: "Caesar", course_id: 6, price: 5.53, description: "Parmesan cheese, homemade croutons, and romaine lettuce")
+Dish.create(name: "Greek", course_id: 6, price: 8.87, description: "Olives... feta cheese, tomato, and garlic bread")
+Dish.create(name: "Chef", course_id: 6, price: 8.87, description: "cheddar cheese, swiss cheese, ham, turkey, bacon, and egg")
