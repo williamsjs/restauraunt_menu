@@ -16,13 +16,13 @@
         <%= content_tag(:h2, course.name)%>
         <% course.dishes.each do |dish| %>
         <%= content_tag(:h4, dish.name) %>
-        <ul>
-          <p>Price: <%= dish.price %></p>
-          <p>Description: <%= dish.description %></p>
-        </ul>
+        <%= content_tag(:p, "Price: #{dish.price}") %>
+        <%= content_tag(:p, "Description: #{dish.description}") %>
+        <% end %>
+      </div>
+      <% end %>
     </div>
   </div>
-    <% end %>
-  <% end %>
+
 
 </div>
